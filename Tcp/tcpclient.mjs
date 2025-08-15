@@ -6,3 +6,4 @@ const client = net.createConnection({port :5000},()=>{
     })
     client.write('hello ')
 })
+console.log("hello")
