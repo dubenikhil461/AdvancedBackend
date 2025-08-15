@@ -1,0 +1,18 @@
+#Latency
+The Delay before Transfering the First data byte by server
+
+#ResponseTime
+Response Time = Latency + Server Processing Time + Transfer Time
+
+#Bandwidth
+Network Speed (Bandwidth)
+What it measures: How much data can be sent per second.
+Cause: Your ISP plan, hardware limits, server capacity.
+Analogy: The number of lanes on a highway (more lanes → more cars at once).
+Unit: Mbps, Gbps, etc.
+
+
+#Inshort 
+The sequence is:
+Latency phase → Time until the first byte starts coming in (network delay).
+Bandwidth phase → How fast the remaining bytes arrive once the transfer has started.
