@@ -1,0 +1,36 @@
+| Feature           | Bytecode                                      | Machine Code                           |
+| ----------------- | --------------------------------------------- | -------------------------------------- |
+| CPU readable?     | ❌ Needs VM to translate                      | ✅ Directly readable by CPU          |
+| Portability       | ✅ Portable (run on any machine with right VM) | ❌ CPU-specific                      |
+| Speed             | Slower (unless JIT compiled)                  | Fastest possible                       |
+| Examples          | Java `.class`, Python `.pyc`, WebAssembly     | Native `.exe`, compiled C/C++ binaries |
+
+
+| Feature                 | Source Code | Object Code | Executable (.exe) |
+| ----------------------- | ----------- | ----------- | ----------------- |
+| **Readable by humans?** | ✅ Yes       | ❌ No        | ❌ No              |
+| **Complete program?**   | ❌ No        | ❌ No        | ✅ Yes             |
+| **Runs directly?**      | ❌ No        | ❌ No        | ✅ Yes             |
+| **Example**             | `.c` file   | `.obj` file | `.exe` file       |
+
+
+For Java (.java files)
+.java → You write source code in Java.
+The Java compiler (javac) translates .java → .class (bytecode).
+The JVM (Java Virtual Machine) runs the .class file:
+Interpreter: Reads bytecode instructions and executes them.
+JIT Compiler (Just-In-Time): Translates bytecode into machine code right before execution so the CPU can run it directly.
+📌 Key point — The JVM doesn’t read .java files directly; it runs .class (bytecode).
+
+java is jit default
+
+Java AOT Compilation (Optional)
+Since Java 9, you can compile Java Ahead-Of-Time into machine code before running (using tools like jaotc or GraalVM’s native-image).
+This:
+Improves startup time.
+Removes need for JIT at runtime.
+Produces platform-specific executables (loses some portability).
+
+summary.
+Bytecode = You speak a universal language (like Esperanto) and bring an interpreter (VM) to every country.
+Machine code = You speak the local language directly (super fast), but only in the country you learned it for.

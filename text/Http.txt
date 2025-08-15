@@ -38,3 +38,7 @@ Chunked encoding	    No	        Yes
 Caching control	Basic	Advanced
 Pipelining	            No	        Yes
 Multiplexing	        No	        No
+
+Why HTTP/2 fixed this
+HTTP/2 introduced multiplexing: multiple requests/responses can be in flight interleaved on the same TCP connection.
+No need to wait for earlier responses before sending later ones — so no HOL blocking at the application layer.
