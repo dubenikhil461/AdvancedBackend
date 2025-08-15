@@ -1,0 +1,8 @@
+protocol :
+1.	data format textbased(plain text ,json ,xml), binary(h2,h3)
+2.	transfer mode messagebased(udp(no control),http) streambased(tcp(control,congestion))
+3.	addressing (ip,mac,dns)
+4.	directionality (bidirectional, unidirectional, half/full duplex)
+5.	state (full = tcp,grpc,apache ; less = udp,http)
+6.	routing (proxies,gateway)
+7.	error management (error code)
