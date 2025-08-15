@@ -42,3 +42,8 @@ Multiplexing	        No	        No
 Why HTTP/2 fixed this
 HTTP/2 introduced multiplexing: multiple requests/responses can be in flight interleaved on the same TCP connection.
 No need to wait for earlier responses before sending later ones — so no HOL blocking at the application layer.
+
+Which header is used in HTTP/1.1 to send partial data in chunks without knowing the total size beforehand?
+transfer-encoding : chunk
+connection: keep-alive (for http1.0 for persistent connection and http 1.1 its is default )
+host : example.com (required for http1.1)
