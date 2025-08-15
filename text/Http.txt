@@ -1,0 +1,40 @@
+HTTP/1.1 – Revision Notes
+🔹 Introduced (1997)
+
+An improvement over HTTP/1.0 — still widely used.
+
+✅ Key Features
+Persistent Connections (Keep-Alive)
+One TCP connection can handle multiple requests/responses.
+Reduces TCP handshake overhead.
+Host Header Required
+Host header is mandatory → supports virtual hosting (multiple domains on one IP).
+Chunked Transfer Encoding
+Allows sending data in chunks without knowing total size beforehand.
+Useful for streaming.
+More Status Codes
+Added codes like 409 Conflict, 410 Gone.
+Better Caching Controls
+Cache-Control, ETag, If-Modified-Since, If-None-Match.
+Pipelining Support (but rarely used)
+Multiple requests sent without waiting for responses (limited by HOL blocking).
+
+⚠ Limitations
+Head-of-Line Blocking in pipelining (one slow response delays all).
+Still one request per connection at a time unless pipelining (no multiplexing).
+Overhead in loading many small files (CSS, JS, images).
+
+📌 Common Headers
+Connection: keep-alive
+Host: example.com
+Cache-Control: no-cache
+Transfer-Encoding: chunked
+
+💡 Summary Table
+Feature             	HTTP/1.0	HTTP/1.1
+Persistent connections	No	        Yes
+Host header required	No	        Yes
+Chunked encoding	    No	        Yes
+Caching control	Basic	Advanced
+Pipelining	            No	        Yes
+Multiplexing	        No	        No
